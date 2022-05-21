@@ -1,0 +1,28 @@
+为什么有缓冲I/O?
+[[
+    因为在系统层面，对字节块的整数倍大小的操作是效率最高的(1024,2048,4096)，
+    而应用层面，只关心一个字符，一行字符等。
+
+    所以，提供缓冲区，当应用读写达到字节块的整数倍的时候，再向系统发起请求。
+    这就减少了系统调用和保证了对字节块的整数倍大小进行操作。
+    效率更高！！！
+    
+    c 语言里面就是标准库 stdio.h
+    fopen(), flcose(), 
+    fgets(), fgetc(), 
+    fputc(), fputs(),
+    fread(), fwrite(),
+
+    fseek(), fsetpos(),frewind(),
+
+    fflush(),
+
+    feof(),
+
+    ferror(), clearerr(),
+
+    flockfile(), funlockfile(),
+
+    fdopen(),
+]]
+
