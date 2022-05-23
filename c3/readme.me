@@ -7,7 +7,7 @@
     这就减少了系统调用和保证了对字节块的整数倍大小进行操作。
     效率更高！！！
     
-    c 语言里面就是标准库 stdio.h
+    c 语言里面就是标准库 stdio.h(标准库提供了锁机制.)
     fopen(), flcose(), 
     fgets(), fgetc(), 
     fputc(), fputs(),
@@ -15,14 +15,28 @@
 
     fseek(), fsetpos(),frewind(),
 
-    fflush(),
+    fflush(), -- 将数据从用户空间刷新到内核
 
     feof(),
 
     ferror(), clearerr(),
 
-    flockfile(), funlockfile(),
+    fdopen(), fileno()
 
-    fdopen(),
+    以上函数都还有非加锁版本
+    fputc_unlock(), *_unlock()...
+-------------------------------------
+
+    线程安全问题：
+    1->synchronized access 
+    flockfile(), funlockfile()
+    以及非阻塞版本
+    ftrylockfile(),
+    -------------------------------------
+
+    2->thread-local
+    将所有的I/O操作委托给一个线程，
+    或者持有一个线程池，将某个I/O映射到某个指定线程.
 ]]
+
 
