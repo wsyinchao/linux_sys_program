@@ -1,0 +1,7 @@
+download socket-manual(unix network programming v1) for socket programming.
+
+and learning.
+
+and write some demonstration.
+
+todo...
