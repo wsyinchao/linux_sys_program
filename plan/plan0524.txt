@@ -5,3 +5,10 @@ and learning.
 and write some demonstration.
 
 todo...
+
+----------------------------------------------
+ADJUST plan!!!
+To learn the source code of skynet framework.
+通读一遍，遇到不会问题，专项查找...
+之后，回过头来，琢磨设计思想...
+----------------------------------------------
